@@ -1,0 +1,38 @@
+version: '3.4'
+
+services:
+  bankingapi:
+    image: bankingapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db;Port=5432;Database=bankingapidb;User Id=user;Password=password; # Veritabanı bağlantısı
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: bankingapidb
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    
+  pgadmin:
+    container_name: pgadmin-container
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+
+volumes:
+  postgres-data:
