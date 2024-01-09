@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  bankingapi:
+    image: ${DOCKER_REGISTRY-}bankingapi
+    build:
+      context: .
+      dockerfile: src/BankingAPI/Dockerfile

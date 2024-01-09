@@ -5,17 +5,16 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0F607D8F-AB0C-4E97-AB5C-E517C66FEE47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingAPI", "src\BankingAPI\BankingAPI.csproj", "{4228C53B-4B50-4AC6-9C3A-5EE2089E9493}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingAPI", "src\BankingAPI\BankingAPI.csproj", "{4228C53B-4B50-4AC6-9C3A-5EE2089E9493}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingAPITests", "src\BankingAPITests\BankingAPITests.csproj", "{82C3F449-6CCE-40A1-B4F2-DA9AD39B054F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingAPITests", "src\BankingAPITests\BankingAPITests.csproj", "{82C3F449-6CCE-40A1-B4F2-DA9AD39B054F}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{F4F1081D-280A-4361-9D25-D8F9BC9336E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4228C53B-4B50-4AC6-9C3A-5EE2089E9493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -26,9 +25,19 @@ Global
 		{82C3F449-6CCE-40A1-B4F2-DA9AD39B054F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82C3F449-6CCE-40A1-B4F2-DA9AD39B054F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82C3F449-6CCE-40A1-B4F2-DA9AD39B054F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4F1081D-280A-4361-9D25-D8F9BC9336E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F1081D-280A-4361-9D25-D8F9BC9336E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F1081D-280A-4361-9D25-D8F9BC9336E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F1081D-280A-4361-9D25-D8F9BC9336E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4228C53B-4B50-4AC6-9C3A-5EE2089E9493} = {0F607D8F-AB0C-4E97-AB5C-E517C66FEE47}
 		{82C3F449-6CCE-40A1-B4F2-DA9AD39B054F} = {0F607D8F-AB0C-4E97-AB5C-E517C66FEE47}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E36ABE3F-E045-4E49-B567-E5D1BF4D93F3}
 	EndGlobalSection
 EndGlobal
