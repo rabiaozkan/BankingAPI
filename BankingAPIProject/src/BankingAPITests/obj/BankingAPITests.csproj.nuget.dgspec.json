@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\merve\\Desktop\\csharp\\Fimple\\Fimple\\BankingAPIProject\\src\\BankingAPITests\\BankingAPITests.csproj": {}
+    "C:\\Users\\merve\\Desktop\\csharp\\Github\\BankingAPI\\BankingAPIProject\\src\\BankingAPITests\\BankingAPITests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\merve\\Desktop\\csharp\\Fimple\\Fimple\\BankingAPIProject\\src\\BankingAPITests\\BankingAPITests.csproj": {
+    "C:\\Users\\merve\\Desktop\\csharp\\Github\\BankingAPI\\BankingAPIProject\\src\\BankingAPITests\\BankingAPITests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\merve\\Desktop\\csharp\\Fimple\\Fimple\\BankingAPIProject\\src\\BankingAPITests\\BankingAPITests.csproj",
+        "projectUniqueName": "C:\\Users\\merve\\Desktop\\csharp\\Github\\BankingAPI\\BankingAPIProject\\src\\BankingAPITests\\BankingAPITests.csproj",
         "projectName": "BankingAPITests",
-        "projectPath": "C:\\Users\\merve\\Desktop\\csharp\\Fimple\\Fimple\\BankingAPIProject\\src\\BankingAPITests\\BankingAPITests.csproj",
+        "projectPath": "C:\\Users\\merve\\Desktop\\csharp\\Github\\BankingAPI\\BankingAPIProject\\src\\BankingAPITests\\BankingAPITests.csproj",
         "packagesPath": "C:\\Users\\merve\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\merve\\Desktop\\csharp\\Fimple\\Fimple\\BankingAPIProject\\src\\BankingAPITests\\obj\\",
+        "outputPath": "C:\\Users\\merve\\Desktop\\csharp\\Github\\BankingAPI\\BankingAPIProject\\src\\BankingAPITests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

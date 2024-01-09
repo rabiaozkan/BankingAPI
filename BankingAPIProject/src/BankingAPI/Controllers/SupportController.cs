@@ -12,60 +12,43 @@ namespace BankingAPI.Controllers
 
         public SupportController(ISupportService supportService)
         {
-            // SupportService enjekte ediliyor
             _supportService = supportService;
         }
 
+        /// <summary>
+        /// Creates a support request.
+        /// </summary>
+        /// <param name="supportRequest">Support request details.</param>
+        /// <returns>Response for support request creation.</returns>
         [HttpPost("create")]
-        public IActionResult CreateSupportRequest([FromBody] SupportRequestDto supportRequest)
+        public async Task<IActionResult> CreateSupportRequest([FromBody] SupportRequestDto supportRequest)
         {
-            // Kullanıcıdan gelen destek talebi DTO'sunu alıyoruz.
-
-            // DTO'nun geçerli olduğunu doğrulayın
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            try
-            {
-                // Destek talebini işlemek için SupportService kullanılıyor
-                var createdRequest = _supportService.CreateSupportRequestAsync(supportRequest);
+            var createdRequest = await _supportService.CreateSupportRequestAsync(supportRequest);
 
-                // Başarılı bir şekilde oluşturulmuşsa, oluşturulan talebin detaylarını dön
-                return CreatedAtAction(nameof(GetRequestStatus), new { requestId = createdRequest.Id }, createdRequest);
-            }
-            catch (Exception ex)
-            {
-                // İşlem sırasında bir hata oluşursa, hata mesajını dön
-                return BadRequest(new { message = ex.Message });
-            }
+            return CreatedAtAction(nameof(GetRequestStatus), new { requestId = createdRequest.Id }, createdRequest);
         }
 
+        /// <summary>
+        /// Gets the status of a support request.
+        /// </summary>
+        /// <param name="requestId">The ID of the support request.</param>
+        /// <returns>Status of the support request.</returns>
         [HttpGet("status/{requestId}")]
-        public IActionResult GetRequestStatus(int requestId)
+        public async Task<IActionResult> GetRequestStatus(int requestId)
         {
-            // Belirli bir destek talebinin durumunu sorgulama
+            var requestStatus = await _supportService.GetRequestStatusAsync(requestId);
 
-            try
+            if (requestStatus == null)
             {
-                // Talebin durumunu al
-                var requestStatus = _supportService.GetRequestStatusAsync(requestId);
-
-                // Talep bulunamazsa, NotFound döndür
-                if (requestStatus == null)
-                {
-                    return NotFound(new { message = "Request not found" });
-                }
-
-                // Talebin durumunu dön
-                return Ok(requestStatus);
+                return NotFound(new { message = "Request not found" });
             }
-            catch (Exception ex)
-            {
-                // İşlem sırasında bir hata oluşursa, hata mesajını dön
-                return BadRequest(new { message = ex.Message });
-            }
+
+            return Ok(requestStatus);
         }
     }
 }

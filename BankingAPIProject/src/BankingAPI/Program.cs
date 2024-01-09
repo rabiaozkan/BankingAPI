@@ -9,6 +9,7 @@ using System;
 using BankingAPI.Services;
 using BankingAPI.Data;
 using Microsoft.EntityFrameworkCore;
+using BankingAPI.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,6 +50,8 @@ var app = builder.Build();
 // Middleware kullanımı
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 // HTTP istek pipeline'ı konfigürasyonu
 if (app.Environment.IsDevelopment())

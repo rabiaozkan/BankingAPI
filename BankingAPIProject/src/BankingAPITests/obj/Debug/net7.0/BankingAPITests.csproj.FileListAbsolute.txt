@@ -10,3 +10,16 @@ C:\Users\merve\Desktop\csharp\Fimple\Fimple\BankingAPIProject\src\BankingAPITest
 C:\Users\merve\Desktop\csharp\Fimple\Fimple\BankingAPIProject\src\BankingAPITests\obj\Debug\net7.0\refint\BankingAPITests.dll
 C:\Users\merve\Desktop\csharp\Fimple\Fimple\BankingAPIProject\src\BankingAPITests\obj\Debug\net7.0\BankingAPITests.pdb
 C:\Users\merve\Desktop\csharp\Fimple\Fimple\BankingAPIProject\src\BankingAPITests\obj\Debug\net7.0\ref\BankingAPITests.dll
+C:\Users\merve\Desktop\csharp\Github\BankingAPI\BankingAPIProject\src\BankingAPITests\bin\Debug\net7.0\BankingAPITests.deps.json
+C:\Users\merve\Desktop\csharp\Github\BankingAPI\BankingAPIProject\src\BankingAPITests\bin\Debug\net7.0\BankingAPITests.dll
+C:\Users\merve\Desktop\csharp\Github\BankingAPI\BankingAPIProject\src\BankingAPITests\bin\Debug\net7.0\BankingAPITests.pdb
+C:\Users\merve\Desktop\csharp\Github\BankingAPI\BankingAPIProject\src\BankingAPITests\obj\Debug\net7.0\BankingAPITests.csproj.AssemblyReference.cache
+C:\Users\merve\Desktop\csharp\Github\BankingAPI\BankingAPIProject\src\BankingAPITests\obj\Debug\net7.0\BankingAPITests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\merve\Desktop\csharp\Github\BankingAPI\BankingAPIProject\src\BankingAPITests\obj\Debug\net7.0\BankingAPITests.AssemblyInfoInputs.cache
+C:\Users\merve\Desktop\csharp\Github\BankingAPI\BankingAPIProject\src\BankingAPITests\obj\Debug\net7.0\BankingAPITests.AssemblyInfo.cs
+C:\Users\merve\Desktop\csharp\Github\BankingAPI\BankingAPIProject\src\BankingAPITests\obj\Debug\net7.0\BankingAPITests.csproj.CoreCompileInputs.cache
+C:\Users\merve\Desktop\csharp\Github\BankingAPI\BankingAPIProject\src\BankingAPITests\obj\Debug\net7.0\BankingAPITests.sourcelink.json
+C:\Users\merve\Desktop\csharp\Github\BankingAPI\BankingAPIProject\src\BankingAPITests\obj\Debug\net7.0\BankingAPITests.dll
+C:\Users\merve\Desktop\csharp\Github\BankingAPI\BankingAPIProject\src\BankingAPITests\obj\Debug\net7.0\refint\BankingAPITests.dll
+C:\Users\merve\Desktop\csharp\Github\BankingAPI\BankingAPIProject\src\BankingAPITests\obj\Debug\net7.0\BankingAPITests.pdb
+C:\Users\merve\Desktop\csharp\Github\BankingAPI\BankingAPIProject\src\BankingAPITests\obj\Debug\net7.0\ref\BankingAPITests.dll

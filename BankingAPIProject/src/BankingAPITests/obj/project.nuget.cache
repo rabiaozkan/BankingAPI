@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uVGBjIRowmEu1BbQMnIFo25Nk8Mzq3JNdPcw8XE/yWJHwwM3rOGq84bvfaeQDdwC4bFc4523LudhDOVUTLu4zg==",
+  "dgSpecHash": "tZs9xPdsjWx++EppQfGtY2ZbWeSG6hGuNLj9G5MKLpPlZns+ebYMuyvZPMFvOxEs43Z1blkVNj58TtTvbxUNAw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\merve\\Desktop\\csharp\\Fimple\\Fimple\\BankingAPIProject\\src\\BankingAPITests\\BankingAPITests.csproj",
+  "projectFilePath": "C:\\Users\\merve\\Desktop\\csharp\\Github\\BankingAPI\\BankingAPIProject\\src\\BankingAPITests\\BankingAPITests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\merve\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\merve\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

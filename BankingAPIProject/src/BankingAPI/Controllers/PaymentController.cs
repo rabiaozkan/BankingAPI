@@ -16,66 +16,48 @@ namespace BankingAPI.Controllers
             _paymentService = paymentService;
         }
 
+        /// <summary>
+        /// Sets up an automatic payment.
+        /// </summary>
+        /// <param name="setup">Details for setting up an auto payment.</param>
+        /// <returns>Response for auto payment setup.</returns>
         [HttpPost("setup")]
         public async Task<IActionResult> SetupAutoPayment([FromBody] AutoPaymentSetupDto setup)
         {
-            try
-            {
-                var autoPayment = await _paymentService.SetupAutoPaymentAsync(setup);
-                
-                if (autoPayment != null)
-                {
-                    return Ok(new
-                    {
-                        message = "Auto payment setup successfully",
-                        paymentId = autoPayment.PaymentId
-                    });
-                }
+            var autoPayment = await _paymentService.SetupAutoPaymentAsync(setup);
 
-                return BadRequest(new
-                {
-                    message = "Auto payment setup failed"
-                });
-            }
-            catch (Exception ex)
+            if (autoPayment != null)
             {
-                return BadRequest(new
+                return Ok(new
                 {
-                    message = ex.Message
+                    message = "Auto payment setup successfully",
+                    paymentId = autoPayment.PaymentId
                 });
             }
+
+            return BadRequest(new { message = "Auto payment setup failed" });
         }
 
+        /// <summary>
+        /// Processes a payment.
+        /// </summary>
+        /// <param name="payment">Payment details.</param>
+        /// <returns>Response for the payment process.</returns>
         [HttpPost("make")]
         public async Task<IActionResult> MakePayment([FromBody] PaymentDto payment)
         {
-            try
+            var paymentResult = await _paymentService.MakePaymentAsync(payment);
+
+            if (paymentResult)
             {
-                var paymentResult = await _paymentService.MakePaymentAsync(payment);
-
-                if (paymentResult)
+                return Ok(new
                 {
-                    return Ok(new
-                    {
-                        message = "Payment made successfully",
-                        paymentId = payment.PaymentId // Ödeme ID'sini döndür
-                    });
-                }
-
-                return BadRequest(new
-                {
-                    message = "Payment failed"
+                    message = "Payment made successfully",
+                    paymentId = payment.PaymentId // Ödeme ID'sini döndür
                 });
             }
-            catch (Exception ex)
-            {
-                return BadRequest(new
-                {
-                    message = ex.Message
-                });
-            }
+
+            return BadRequest(new { message = "Payment failed" });
         }
-
-
     }
 }
