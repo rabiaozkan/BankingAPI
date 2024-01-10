@@ -6,3 +6,16 @@ services:
     build:
       context: .
       dockerfile: src/BankingAPI/Dockerfile
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432" 
+    environment:
+      POSTGRES_DB: test_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
